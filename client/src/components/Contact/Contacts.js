@@ -10,7 +10,7 @@ const Contacts = () => {
     if (contacts.length === 0) {
         return (
             <div style={{ padding: '70px' }}>
-                <h2 style={{ style }}><i className='fa-regular fa-face-frown-open fa-bounce fa-lg' style={{ color: 'blue', padding: '0' }} /> No contacts to display</h2>
+                <h2 style={{ style }}><i className='fa-regular fa-face-frown-open fa-lg' style={{ color: 'blue', padding: '0' }} /> No contacts to display</h2>
                 <h3 style={{ marginLeft: '2em' }}>Please add some contacts</h3>
             </div>
         )
