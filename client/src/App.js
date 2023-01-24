@@ -5,8 +5,10 @@ import Navbar from "./components/layout/Navbar";
 import Home from "./components/pages/Home";
 import About from "./components/pages/About";
 import Register from "./components/auth/Register";
+import Login from './components/auth/Login';
 import ContactState from "./context/contact/ContactState";
 import AuthState from "./context/auth/AuthState";
+
 function App() {
   return (
     <AuthState>
@@ -19,6 +21,7 @@ function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/about" element={<About />} />
                 <Route exact path="/register" element={<Register />} />
+                <Route exact path="/login" element={<Login />} />
               </Routes>
             </div>
           </Fragment>
