@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === 'production') {
     app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'))); // to direct server to load index.html file when running in production 
 }
 
-// Declaring where server will start
+// Declaring where server will start 
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log(`Server started at port: ${PORT}`));
