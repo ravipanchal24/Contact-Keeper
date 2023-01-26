@@ -17,7 +17,7 @@ const Navbar = ({ title, icon }) => {
 
   const authLinks = (
     <Fragment>
-      <li>Hello {user && user.user.name}</li>
+      <li>Hello, {user && user.user.name}</li>
       {/* prettier-ignore */}
       <li>
         <a onClick={onLogout} href="#!" style={{ marginLeft: '10px', color: 'red', fontWeight: 'bolder' }}>
@@ -45,8 +45,8 @@ const Navbar = ({ title, icon }) => {
   );
   return (
     <div className="navbar bg-primary">
-      <h1>
-        <i className={icon} /> {title}
+      <h1 style={{ fontFamily: 'Solitreo' }}>
+        <i className={icon} style={{ color: 'rgba(255,255,255,0.7)' }} /> {title}
       </h1>
       <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
     </div>
@@ -55,7 +55,7 @@ const Navbar = ({ title, icon }) => {
 
 Navbar.defaultProps = {
   title: "Contact Keeper",
-  icon: "fas fa-id-card-alt",
+  icon: "fa-solid fa-address-book",
 };
 
 Navbar.propTypes = {

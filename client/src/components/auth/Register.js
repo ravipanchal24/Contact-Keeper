@@ -37,20 +37,20 @@ const Register = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    // if (name === '' || email === '' || password === '')
-    //   setAlert('Please enter all fields', 'danger');
-    // else if (password !== password2)
-    //   setAlert('Passwords do not match', 'danger');
-    // else {
-    register({
-      name,
-      email,
-      password
-    });
-    // }
+    if (name === '' || email === '' || password === '')
+      setAlert('Please enter all fields', 'danger');
+    else if (password !== password2)
+      setAlert('Passwords do not match, please try again', 'danger');
+    else {
+      register({
+        name,
+        email,
+        password
+      });
+    }
   };
   return (
-    <div className="form-container">
+    <div className="form-container" style={{ marginTop: '0' }}>
       <h1>
         Account <span className="text-primary">Register</span>
       </h1>

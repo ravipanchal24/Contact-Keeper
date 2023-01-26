@@ -10,6 +10,7 @@ const ContactFilter = () => {
     if (filtered === null) {
       text.current.value = "";
     }
+    // eslint-disable-next-line
   }, []);
 
   const onChange = (e) => {
@@ -26,10 +27,12 @@ const ContactFilter = () => {
         type="text"
         ref={text}
         onChange={onChange}
-        placeholder="Filter Contacts..."
+        placeholder="Search Contacts..."
       />
+      {filtered === null && 
+        <i className="fa-solid fa-magnifying-glass fa-lg" />}
       {filtered &&
-        <i className="fa-solid fa-xmark-circle fa-lg" onClick={() => { text.current.value = ''; clearFilter(); }} /> }
+        <i className="fa-solid fa-xmark-circle fa-lg" onClick={() => { text.current.value = ''; clearFilter(); }} />}
     </div>
   );
 };

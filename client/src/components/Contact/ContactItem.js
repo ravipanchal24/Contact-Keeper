@@ -12,7 +12,7 @@ const ContactItem = ({ contact }) => {
 
   const { _id, name, phone, email, type } = contact;
   return (
-    <div className="card bg-light">
+    <div className="card bg-light contactItem">
       <h3 className="text-primary text-left">
         {name}{" "}
         <span

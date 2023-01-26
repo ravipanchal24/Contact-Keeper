@@ -7,7 +7,7 @@ const About = () => {
       <p className="my-1">
         This is a full stack React app to keep, manage and organise contacts
       </p>
-      <p className="bg-dark p">
+      <p className="bg-dark p" style={{ marginBottom: '2rem' }}>
         <strong>Version: </strong>1.0.0
       </p>
     </div>

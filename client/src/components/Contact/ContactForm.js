@@ -44,7 +44,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form>
+    <form className="contact-form">
       <h2 className="text-primary">
         {current ? "Edit Contact" : "Add Contact"}
       </h2>
@@ -77,33 +77,36 @@ const ContactForm = () => {
         value="personal"
         checked={type === "personal"}
         onChange={onChange}
+        style={{ cursor: 'pointer' }}
       />{" "}
       Personal
-      <input
+      < input
         type="radio"
         name="type"
         id=""
         value="professional"
-        checked={type === "professional"}
+        checked={type === "professional"
+        }
         onChange={onChange}
+        style={{ marginLeft: '20px', cursor: 'pointer' }}
       />{" "}
       Professional
-      <div>
+      < div >
         <input
           type="submit"
           onClick={onSubmit}
           value={current ? "Update Contact" : "Add Contact"}
           className="btn btn-primary btn-block"
         />
-      </div>
+      </div >
       {current && (
         <div>
           <button className="btn btn-light btn-block" onClick={clearAll}>
-            Clear
+            Cancel
           </button>
         </div>
       )}
-    </form>
+    </form >
   );
 };
 

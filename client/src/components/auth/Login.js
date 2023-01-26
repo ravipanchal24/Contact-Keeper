@@ -44,7 +44,7 @@ const Login = () => {
     }
   };
   return (
-    <div className="form-container">
+    <div className="form-container" style={{marginTop:'0'}}>
       <h1>
         Account <span className="text-primary">Login</span>
       </h1>
