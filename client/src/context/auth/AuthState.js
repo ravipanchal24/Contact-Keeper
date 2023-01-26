@@ -68,13 +68,11 @@ const AuthState = props => {
         try {
             const res = await axios.post('/api/auth', formData, config); // we have defined 'https://localhost:5000' in proxy so no need to append it here
             // res will hold the token return by the API
-            console.log(res);
             dispatch({ type: LOGIN_SUCCESS, payload: res?.data }); // if api hit is successful then this will be called
             loadUser(res?.data?.token);
 
         } catch (err) {
             dispatch({ type: LOGIN_FAIL, payload: err.response?.data?.msg });
-            console.log(state.error);
         }
     }
 
