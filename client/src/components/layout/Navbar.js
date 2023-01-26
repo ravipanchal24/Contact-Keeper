@@ -15,7 +15,7 @@ const Navbar = ({ title, icon }) => {
       <li>Hello {user && user.user.name}</li>
       {/* prettier-ignore */}
       <li>
-        <a onClick={onLogout} href="#!" style={{marginLeft:'10px', color:'red', fontWeight:'bolder'}}>
+        <a onClick={onLogout} href="#!" style={{ marginLeft: '10px', color: 'red', fontWeight: 'bolder' }}>
           <i className="fas fa-sign-out-alt" />
           <span className="hide-sm"> Logout</span>
         </a>
